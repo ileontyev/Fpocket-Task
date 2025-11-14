@@ -1,0 +1,38 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     5:
+HEADER 0  - Pocket Score                      : 0.0299
+HEADER 1  - Drug Score                        : 0.0005
+HEADER 2  - Number of alpha spheres           :    15
+HEADER 3  - Mean alpha-sphere radius          : 3.9654
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.5482
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 9.5714
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Amino Acid based volume Score     : 4.2857
+HEADER 9  - Pocket volume (Monte Carlo)       : 242.3955
+HEADER 10  -Pocket volume (convex hull)       : 8.2898
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 6.0000
+HEADER 13 - Number of apolar alpha sphere     :     7
+HEADER 14 - Proportion of apolar alpha sphere : 0.4667
+ATOM    912   CD GLN D  91      20.595   8.146 -15.845  0.00  0.00           C 0
+ATOM    927   CB ASP D  92      18.059  13.925 -14.990  0.00  0.00           C 0
+ATOM    910   CB GLN D  91      20.224   9.883 -14.059  0.00  0.00           C 0
+ATOM    913  OE1 GLN D  91      21.123   8.461 -16.904  0.00  0.00           O 0
+ATOM    914  NE2 GLN D  91      19.536   7.347 -15.804  0.00  0.00           N 0
+ATOM    923    N ASP D  92      19.042  12.309 -13.333  0.00  0.00           N 0
+ATOM    736    O LEU D  79      12.320   9.336  -9.086  0.56  6.43           O 0
+ATOM    888    O PRO D  89      18.359   7.350 -10.546  0.00  0.00           O 0
+ATOM    935    N SER D  93      17.373  13.831 -11.074  0.00  0.00           N 0
+ATOM    977  CD2 PHE D  95      11.725  12.818 -12.148  0.00  0.00           C 0
+ATOM    925    C ASP D  92      17.589  14.218 -12.381  0.00  0.00           C 0
+ATOM    979  CE2 PHE D  95      11.317  12.943 -13.469  0.00  0.00           C 0
+ATOM    926    O ASP D  92      17.045  15.263 -12.704  0.00  0.00           O 0
+ATOM    929  OD1 ASP D  92      16.620  15.406 -16.269  0.00  0.00           O 0
+ATOM    956  NH2 ARG D  94      11.187  15.539 -16.358  0.00  0.00          1+ 0
+ATOM    953   NE ARG D  94      12.967  16.684 -15.459  0.00  0.00           N 0
+TER
+END
