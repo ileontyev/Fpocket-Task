@@ -1,0 +1,82 @@
+;
+;	Input file
+;
+;title               =  216 SPC/E water molecules ; a string
+;cpp                 =  cpp		        ; c-preprocessor
+include= -I/home/leontyev/systems/projects/Cramer_Lab/rubredoxin/topology/CpRd_AF3/ -I./input ; include FF folder
+
+continuation        = no    ; New flag for exact restarting trajectory
+integrator          = md ; sd
+dt                  =  0.0005		; time step
+nsteps              =  200000			; number of steps
+comm_mode           =  Linear; Angular		; Remove center of mass translation and rotation
+nstcomm             =  5			; reset c.o.m. motion
+nstxout             =  10000000		; write coords
+nstvout             =  10000000            ; write velocities
+;xtc_grps           = enzyme_pdb_wat               ; the only saved group
+nstxtcout           =  20000                  ; write coords to xtc-trajectory file
+nstlog              =  2000			; print to logfile
+;energygrps         =  ATOMS	       ; energy groups
+nstenergy           =  1000			; print energies
+ns_type             =  grid ;simple		; pairlist method    
+;=================  Shake Specification  ===============================
+;constraint_algorithm = shake 
+constraints         =  hbonds; all-bonds; hbonds	;	; constraint bonds, angles, etc    MUST BE DONE for hbonds                               
+;shake_tol          = 0.00001                                             
+lincs_order         = 12
+;lincs_iter         = 4
+;unconstrained_start = yes  ; Older flag
+;=============== position retrains =============
+define              =  -DPOSRES_PROT ; -DDISTRE_E15SC_HB ; -DDISTRE_E15_HB ; -DDISTRE_E15-W4 -DDISTRE_E15-F30 ; -DPOSRES_PROT ; -DPOSRES_3P  -DDISRES_MG-COFAC -DDISRES_SW1 -DDISRES_E63-BB65   ; -D at the begining of the varname is necessary!!!
+; Distance restrain parameters if DISTRE_E15-W4 DISTRE_E15-F30 are defined
+disre               = simple
+disre-fc            = 1000   ; force constant for distance restraints, which is multiplied by a (possibly) different fac
+;define              = -DPOSRES_PROT9CA -DPOSRES_3P -DDISRES_MG-COFAC -DDISRES_E37-R68 -DDISRES_E63-BB65                 ; -D at the begining of the varname is necessary!!!
+refcoord-scaling    = all ; no; com                       ; scaling reference coordinates with box size variations
+;=================  Cutt off specification =============================                                                                
+pbc                 = xyz		; periodic boundary conditions
+;optimize_fft       = yes			; perform FFT optimization at start
+pme_order           = 4             ; interpolation order for PME
+rlist               =  1.1			; cut-off for ns 
+cutoff-scheme       =  Verlet;  group
+nstlist             =  5			; update pairlist
+verlet-buffer-tolerance=0.005; -1   ; To prevent automatic increase of nstlist for Verlet performance balancing.
+; OPTIONS FOR ELECTROSTATICS AND VDW: These parameters were all optimized for fast and accurate small molecule calculations.
+; See Shirts and Paliwal (2011)
+; Method for doing electrostatics = 
+coulombtype         = PME
+rcoulomb-switch     = 0.9
+rcoulomb            = 0.9
+epsilon-rf          =  0
+; Method for doing Van der Waals = 
+vdw-type            = Cut-off; Cut-off ; !!! Switch - slow but allows rvdw<rlist
+rvdw-switch         = 1.0 ; In gmx rvdw-switch
+rvdw                = 0.9
+dispcorr            = EnerPres   ; long range dispersion corrections for Energy and Pressure
+
+; FFT grid size, when a value is 0 fourierspacing will be used
+fourierspacing      = 0.12
+fourier_nx          = 0
+fourier_ny          = 0
+fourier_nz          = 0
+;=======================================================================
+Tcoupl              = v-rescale; nose-hoover; berendsen; 	;        ; temperature coupling
+tc-grps             = Protein Water_and_ions ; System
+ref_t               = 298 298
+tau_t               = 1.0 1.0
+nsttcouple          = 5
+
+Pcoupl              = no; berendsen          ; pressure bath
+Pcoupltype          = isotropic   ; pressure geometry
+tau_p               = 5.0         ; p-coupling time
+compressibility     = 5.0e-5
+ref_p               = 1.01325
+nstpcouple          = 5
+;=======================================================================
+gen_vel             =  yes			; generate initial velocities
+gen_temp            =  200			; initial temperature
+gen_seed            =  -1			; random seed
+;=======================================================================
+;freezegrps          =  CRYST CRYST_OW; CA ;Na+ should be frozen ; otherwise, will brake MD run
+;freezedim           =  Y Y Y  Y Y Y
+;energygrp_excl      =  CRYST CRYST;   Na+ CA

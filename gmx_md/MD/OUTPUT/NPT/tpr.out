@@ -1,0 +1,99 @@
+            :-) GROMACS - gmx grompp, 2024.3 (double precision) (-:
+
+Executable:   /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d
+Data prefix:  /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3
+Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD/OUTPUT/228434.InProt_solv-tip4pew_box60A_T298/NPT
+Command line:
+  gmx_d grompp -zero -maxwarn 2000 -t ../NVT/out.cpt -o out.tpr -n ../index.ndx -f InP_npt.mdp -p ../rubredoxin_solv_ions.top -c out_nvt.gro -r ../rubredoxin_solv_ions_Xray.pdb
+
+Ignoring obsolete mdp entry 'ns_type'
+Replacing old mdp entry 'nstxtcout' by 'nstxout-compressed'
+
+NOTE 1 [file InP_npt.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+
+NOTE 2 [file InP_npt.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+
+NOTE 3 [file InP_npt.mdp]:
+  nstcomm < nstcalcenergy defeats the purpose of nstcalcenergy, consider
+  setting nstcomm equal to nstcalcenergy for less overhead
+
+
+WARNING 1 [file InP_npt.mdp]:
+  The Berendsen barostat does not generate any strictly correct ensemble,
+  and should not be used for new production simulations (in our opinion).
+  We recommend using the C-rescale barostat instead.
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group Protein is 4568.71
+Number of degrees of freedom in T-Coupling group Water_and_ions is 43011.29
+
+NOTE 4 [file InP_npt.mdp]:
+  Removing center of mass motion in the presence of position restraints
+  might cause artifacts. When you are using position restraints to
+  equilibrate a macro-molecule, the artifacts are usually negligible.
+
+Last frame         -1 time  100.000   
+
+There were 4 NOTEs
+
+There was 1 WARNING
+
+GROMACS reminds you: "It is unfortunate that the authors did not make better use of all the electric power energy that went into these massive computations." (An anonymous referee)
+
+Setting the LD random seed to 1004173278
+
+Generated 820 of the 820 non-bonded parameter combinations
+
+Generated 820 of the 820 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'CL'
+
+Excluding 3 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+
+The largest distance between excluded atoms is 0.435 nm between atom 1187 and 1195
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 298 K
+
+Calculated rlist for 1x1 atom pair-list as 0.901 nm, buffer size 0.001 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 0.900 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+
+Reading Coordinates, Velocities and Box size from old trajectory
+
+Will read whole trajectory
+
+Using frame at t = 100 ps
+
+Starting time for run is 0 ps
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 52x60x60, spacing 0.118 0.118 0.116
+
+Estimate for the relative computational load of the PME mesh part: 0.24
+
+This run will generate roughly 12 Mb of data

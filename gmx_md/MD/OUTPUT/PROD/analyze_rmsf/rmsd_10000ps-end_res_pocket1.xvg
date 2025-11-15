@@ -1,0 +1,31 @@
+# This file was created Sat Nov 15 05:53:42 2025
+# Created by:
+#             :-) GROMACS - gmx rmsf, 2024.3 (double precision) (-:
+# 
+# Executable:   /home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d
+# Data prefix:  /home/leontyev/programs/bin/gromacs/gromacs-2024.3
+# Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD_distro/PROD/analyze_rmsf
+# Command line:
+#   gmx_d rmsf -f ../out_comb-300ns.xtc -s ../../MIN/pd1_solv_ions.tpr -b 10000 -n idx_pockets.ndx -res -aniso -ox aver_10000ps-end_res_pocket1.pdb -oq bfac_10000ps-end_res_pocket1.pdb -o rmsf_10000ps-end_res_pocket1.xvg -od rmsd_10000ps-end_res_pocket1.xvg
+# gmx rmsf is part of G R O M A C S:
+#
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+#
+@    title "RMS Deviation"
+@    xaxis  label "Residue"
+@    yaxis  label "(nm)"
+@TYPE xy
+   48   0.1358
+   49   0.1069
+   50   0.0735
+   51   0.0967
+   54   0.2413
+   55   0.1766
+   58   0.3537
+   59   0.2559
+   60   0.3521
+   61   0.2124
+   63   0.1850
+   65   0.1097
+   66   0.1949
+   67   0.1030

@@ -1,0 +1,194 @@
+The job was started at 10.11.25-10:07:09 on node aas-gpu-cluster
+The runtime output is stored locally on node aas-gpu-cluster at ./
+mkdir: cannot create directory ‘./’: File exists
+
+
+Starting block for phase Protein
+             :-) GROMACS - gmx mdrun, 2024.3 (double precision) (-:
+
+Executable:   /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d
+Data prefix:  /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3
+Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD/OUTPUT/228434.InProt_solv-tip4pew_box60A_T298/MIN
+Command line:
+  gmx_d mdrun -nb cpu -bonded cpu -pme cpu -ntomp 8 -s rubredoxin_solv_ions.tpr -deffnm rubredoxin_solv_ions -e .//rubredoxin_solv_ions.edr -o .//rubredoxin_solv_ions.trr -x .//rubredoxin_solv_ions.xtc -c rubredoxin_solv_ions_min.gro -g rubredoxin_solv_ions.log
+
+Reading file rubredoxin_solv_ions.tpr, VERSION 2024.3 (double precision)
+Update groups can not be used for this system because the construction atoms of a virtual site are only partly with a group of constrained atoms
+
+Using 8 OpenMP threads 
+
+
+NOTE: The number of threads is not equal to the number of (logical) cpus
+      and the -pin option is set to auto: will not pin threads to cpus.
+      This can lead to significant performance degradation.
+      Consider using -pin on (and -pinoffset in case you run multiple jobs).
+
+Polak-Ribiere Conjugate Gradients:
+   Tolerance (Fmax)   =  1.00000e+01
+   Number of steps    =       100000
+   F-max             =  4.86080e+06 on atom 349
+   F-Norm            =  3.88919e+04
+
+
+writing lowest energy coordinates.
+
+Polak-Ribiere Conjugate Gradients converged to Fmax < 10 in 10487 steps
+Potential Energy  = -4.58482426762936e+05
+Maximum force     =  7.58106925812666e+00 on atom 8893
+Norm of force     =  3.83430238388856e-01
+
+GROMACS reminds you: "I Wrapped a Newspaper Round My Head" (F. Zappa)
+
+mv: './/InP_min.mdp' and './InP_min.mdp' are the same file
+mv: './/mdout.mdp' and './mdout.mdp' are the same file
+mv: './/rubredoxin_solv_ions.edr' and './rubredoxin_solv_ions.edr' are the same file
+mv: './/rubredoxin_solv_ions.log' and './rubredoxin_solv_ions.log' are the same file
+mv: './/rubredoxin_solv_ions_min.gro' and './rubredoxin_solv_ions_min.gro' are the same file
+mv: './/rubredoxin_solv_ions.tpr' and './rubredoxin_solv_ions.tpr' are the same file
+mv: './/rubredoxin_solv_ions.trr' and './rubredoxin_solv_ions.trr' are the same file
+mv: './/tpr.out' and './tpr.out' are the same file
+                      :-) GROMACS - gmx mdrun, 2024.3 (-:
+
+Executable:   /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx
+Data prefix:  /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3
+Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD/OUTPUT/228434.InProt_solv-tip4pew_box60A_T298/NVT
+Command line:
+  gmx mdrun -gpu_id 1 -nb gpu -bonded gpu -pme gpu -update cpu -ntomp 8 -s out.tpr -deffnm out -e .//out.edr -o .//out.trr -x .//out.xtc -c out_nvt.gro -g out.log
+
+Reading file out.tpr, VERSION 2024.3 (double precision)
+Changing nstlist from 5 to 100, rlist from 0.9 to 0.952
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:1,PME:1
+PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+PP task will update and constrain coordinates on the CPU
+PME tasks will do all aspects on the GPU
+Using 8 OpenMP threads 
+
+
+NOTE: The number of threads is not equal to the number of (logical) cpus
+      and the -pin option is set to auto: will not pin threads to cpus.
+      This can lead to significant performance degradation.
+      Consider using -pin on (and -pinoffset in case you run multiple jobs).
+starting mdrun 'PD-1 proteien pdb:7WSL solvated in TIP4PEW Water and salt 0.15M'
+200000 steps,    100.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:      889.254      111.184      799.8
+                 (ns/day)    (hour/ns)
+Performance:       77.709        0.309
+
+GROMACS reminds you: "It is unfortunate that the authors did not make better use of all the electric power energy that went into these massive computations." (An anonymous referee)
+
+mv: './/InP_nvt.mdp' and './InP_nvt.mdp' are the same file
+mv: './/mdout.mdp' and './mdout.mdp' are the same file
+mv: './/out.cpt' and './out.cpt' are the same file
+mv: './/out.edr' and './out.edr' are the same file
+mv: './/out.log' and './out.log' are the same file
+mv: './/out_nvt.gro' and './out_nvt.gro' are the same file
+mv: './/out.tpr' and './out.tpr' are the same file
+mv: './/out.trr' and './out.trr' are the same file
+mv: './/out.xtc' and './out.xtc' are the same file
+mv: './/rubredoxin_solv_ions_min.gro' and './rubredoxin_solv_ions_min.gro' are the same file
+mv: './/tpr.out' and './tpr.out' are the same file
+                      :-) GROMACS - gmx mdrun, 2024.3 (-:
+
+Executable:   /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx
+Data prefix:  /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3
+Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD/OUTPUT/228434.InProt_solv-tip4pew_box60A_T298/NPT
+Command line:
+  gmx mdrun -gpu_id 1 -nb gpu -bonded gpu -pme gpu -update cpu -ntomp 8 -s out.tpr -deffnm out -e .//out.edr -o .//out.trr -x .//out.xtc -c out_npt.gro -g out.log
+
+Reading file out.tpr, VERSION 2024.3 (double precision)
+Changing nstlist from 5 to 100, rlist from 0.9 to 0.956
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:1,PME:1
+PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+PP task will update and constrain coordinates on the CPU
+PME tasks will do all aspects on the GPU
+Using 8 OpenMP threads 
+
+
+NOTE: The number of threads is not equal to the number of (logical) cpus
+      and the -pin option is set to auto: will not pin threads to cpus.
+      This can lead to significant performance degradation.
+      Consider using -pin on (and -pinoffset in case you run multiple jobs).
+starting mdrun 'PD-1 proteien pdb:7WSL solvated in TIP4PEW Water and salt 0.15M'
+2000000 steps,   1000.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     8799.138     1099.912      800.0
+                 (ns/day)    (hour/ns)
+Performance:       78.552        0.306
+
+GROMACS reminds you: "You see it through a charmed medium: you can not discern that the gilding is slime and the silk draperies cobwebs; that the marble is sordid slate, and the polished woods mere refuse chips and scale bark." (Mr. Rochester in Jane Eyre by Charlotte Bronte)
+
+mv: './/InP_npt.mdp' and './InP_npt.mdp' are the same file
+mv: './/mdout.mdp' and './mdout.mdp' are the same file
+mv: './/out.cpt' and './out.cpt' are the same file
+mv: './/out.edr' and './out.edr' are the same file
+mv: './/out.log' and './out.log' are the same file
+mv: './/out_npt.gro' and './out_npt.gro' are the same file
+mv: './/out_nvt.gro' and './out_nvt.gro' are the same file
+mv: './/out_prev.cpt' and './out_prev.cpt' are the same file
+mv: './/out.tpr' and './out.tpr' are the same file
+mv: './/out.trr' and './out.trr' are the same file
+mv: './/out.xtc' and './out.xtc' are the same file
+mv: './/tpr.out' and './tpr.out' are the same file
+                      :-) GROMACS - gmx mdrun, 2024.3 (-:
+
+Executable:   /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx
+Data prefix:  /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3
+Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD/OUTPUT/228434.InProt_solv-tip4pew_box60A_T298/PROD
+Command line:
+  gmx mdrun -gpu_id 1 -nb gpu -bonded gpu -pme gpu -update cpu -ntomp 8 -s out.tpr -deffnm out -e .//out.edr -o .//out.trr -x .//out.xtc -c out_prod.gro -g out.log
+
+Reading file out.tpr, VERSION 2024.3 (double precision)
+Changing nstlist from 5 to 80, rlist from 0.9 to 1.05
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:1,PME:1
+PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+PP task will update and constrain coordinates on the CPU
+PME tasks will do all aspects on the GPU
+Using 8 OpenMP threads 
+
+
+NOTE: The number of threads is not equal to the number of (logical) cpus
+      and the -pin option is set to auto: will not pin threads to cpus.
+      This can lead to significant performance degradation.
+      Consider using -pin on (and -pinoffset in case you run multiple jobs).
+starting mdrun 'PD-1 proteien pdb:7WSL solvated in TIP4PEW Water and salt 0.15M'
+50000000 steps, 100000.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:   248248.245    31031.064      800.0
+                         8h37:11
+                 (ns/day)    (hour/ns)
+Performance:      278.431        0.086
+
+GROMACS reminds you: "Christianity may be OK between consenting adults in private but should not be taught to young children." (Francis Crick)
+
+mv: './/InP.mdp' and './InP.mdp' are the same file
+mv: './/mdout.mdp' and './mdout.mdp' are the same file
+mv: './/out.cpt' and './out.cpt' are the same file
+mv: './/out.edr' and './out.edr' are the same file
+mv: './/out.log' and './out.log' are the same file
+mv: './/out_npt.gro' and './out_npt.gro' are the same file
+mv: './/out_prev.cpt' and './out_prev.cpt' are the same file
+mv: './/out_prod.gro' and './out_prod.gro' are the same file
+mv: './/out.tpr' and './out.tpr' are the same file
+mv: './/out.trr' and './out.trr' are the same file
+mv: './/out.xtc' and './out.xtc' are the same file
+mv: './/tpr.out' and './tpr.out' are the same file
+rm: refusing to remove '.' or '..' directory: skipping './'

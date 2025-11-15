@@ -1,0 +1,25 @@
+            :-) GROMACS - gmx grompp, 2024.3 (double precision) (-:
+
+Executable:   /home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d
+Data prefix:  /home/leontyev/programs/bin/gromacs/gromacs-2024.3
+Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD_distro/PROD/analyze_rmsf
+Command line:
+  gmx_d grompp -zero -maxwarn 10 -o ref_struc.tpr -f ../InP.mdp -n ../../index.ndx -p ../../-InP.top -c -r
+
+
+-------------------------------------------------------
+Program:     gmx grompp, version 2024.3
+Source file: src/gromacs/commandline/cmdlineparser.cpp (line 271)
+Function:    void gmx::CommandLineParser::parse(int*, char**)
+
+Error in user input:
+Invalid command-line options
+  In command-line option -p
+    File '../../-InP.top' does not exist or is not accessible.
+    The file could not be opened.
+      Reason: No such file or directory
+      (call to fopen() returned error code 2)
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------

@@ -1,0 +1,14 @@
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 50.126 +/- 3.8115, min = 41.505, max = 65.767 , tmin=105.000, tmax=250.000
+pocket2: 44.234 +/- 5.8175, min = 30.784, max = 55.103 , tmin=176.000, tmax=126.000
+pocket3: 47.729 +/- 6.7408, min = 31.155, max = 65.734 , tmin=249.000, tmax=219.000
+pocket4: 49.677 +/- 8.1598, min = 31.006, max = 77.951 , tmin= 94.000, tmax= 70.000
+pocket5: 47.049 +/- 6.2037, min = 33.003, max = 62.059 , tmin= 10.000, tmax= 29.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 6.150 +/- 0.2612, min = 5.586, max = 7.183 , tmin=198.000, tmax=281.000
+pocket2: 5.447 +/- 0.2590, min = 4.866, max = 6.310 , tmin=  6.000, tmax= 98.000
+pocket3: 5.713 +/- 0.4534, min = 4.693, max = 7.037 , tmin= 87.000, tmax=219.000
+pocket4: 6.254 +/- 0.5772, min = 4.536, max = 8.121 , tmin=  0.000, tmax= 70.000
+pocket5: 5.874 +/- 0.3631, min = 4.608, max = 6.878 , tmin= 18.000, tmax= 51.000

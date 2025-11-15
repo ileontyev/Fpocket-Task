@@ -1,0 +1,6 @@
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 6.150 +/- 0.2612, min = 5.586, max = 7.183 , tmin=198.000, tmax=281.000
+pocket2: 5.447 +/- 0.2590, min = 4.866, max = 6.310 , tmin=  6.000, tmax= 98.000
+pocket3: 5.713 +/- 0.4534, min = 4.693, max = 7.037 , tmin= 87.000, tmax=219.000
+pocket4: 6.254 +/- 0.5772, min = 4.536, max = 8.121 , tmin=  0.000, tmax= 70.000
+pocket5: 5.874 +/- 0.3631, min = 4.608, max = 6.878 , tmin= 18.000, tmax= 51.000

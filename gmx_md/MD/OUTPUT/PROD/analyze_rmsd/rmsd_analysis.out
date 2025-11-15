@@ -1,0 +1,111 @@
+
+RMSD Analysis for ../out.xtc
+pocket1: 2.302 +/- 0.3900, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.765 +/- 0.3643, min = 0.942, max = 2.769 , tmin=  0.000, tmax= 98.000
+pocket3: 4.151 +/- 1.1398, min = 0.885, max = 6.753 , tmin=  0.000, tmax= 77.000
+pocket4: 3.384 +/- 0.8417, min = 1.208, max = 5.449 , tmin=  0.000, tmax= 70.000
+pocket5: 3.630 +/- 1.1792, min = 1.034, max = 6.391 , tmin=  0.000, tmax= 29.000
+
+RMSD Analysis for ../out.xtc
+pocket1: 2.302 +/- 0.3900, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.765 +/- 0.3643, min = 0.942, max = 2.769 , tmin=  0.000, tmax= 98.000
+pocket3: 4.151 +/- 1.1398, min = 0.885, max = 6.753 , tmin=  0.000, tmax= 77.000
+pocket4: 3.384 +/- 0.8417, min = 1.208, max = 5.449 , tmin=  0.000, tmax= 70.000
+pocket5: 3.630 +/- 1.1792, min = 1.034, max = 6.391 , tmin=  0.000, tmax= 29.000
+Bbone: 1.424 +/- 0.1805, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out.xtc
+pocket1: 3.209 +/- 1.0698, min = 1.347, max = 5.571 , tmin=173.000, tmax=472.000
+pocket2: 1.846 +/- 0.3360, min = 0.972, max = 2.850 , tmin=234.000, tmax=243.000
+pocket3: 6.012 +/- 2.0904, min = 1.871, max = 8.923 , tmin=134.000, tmax=274.000
+pocket4: 3.352 +/- 0.8642, min = 1.734, max = 6.247 , tmin=248.000, tmax=270.000
+pocket5: 4.815 +/- 1.3879, min = 1.778, max = 8.232 , tmin=171.000, tmax=246.000
+Bbone: 1.877 +/- 0.4450, min = 1.068, max = 3.002 , tmin=149.000, tmax=407.000
+
+RMSD Analysis for ../../out_comb-300ns.xtc
+pocket1: 2.236 +/- 0.3555, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.893 +/- 0.3309, min = 0.942, max = 2.769 , tmin=  0.000, tmax= 98.000
+pocket3: 4.238 +/- 1.1759, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.211 +/- 0.7234, min = 1.208, max = 5.449 , tmin=  0.000, tmax= 70.000
+pocket5: 3.510 +/- 0.9876, min = 1.034, max = 6.391 , tmin=  0.000, tmax= 29.000
+Bbone: 1.436 +/- 0.1524, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 2.183 +/- 0.3720, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.885 +/- 0.3356, min = 0.942, max = 2.814 , tmin=  0.000, tmax=222.000
+pocket3: 4.116 +/- 1.1949, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.259 +/- 0.7541, min = 1.208, max = 6.165 , tmin=  0.000, tmax=244.000
+pocket5: 3.622 +/- 0.9891, min = 1.034, max = 6.502 , tmin=  0.000, tmax=282.000
+Bbone: 1.430 +/- 0.1492, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 2.183 +/- 0.3720, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.885 +/- 0.3356, min = 0.942, max = 2.814 , tmin=  0.000, tmax=222.000
+pocket3: 4.116 +/- 1.1949, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.259 +/- 0.7541, min = 1.208, max = 6.165 , tmin=  0.000, tmax=244.000
+pocket5: 3.622 +/- 0.9891, min = 1.034, max = 6.502 , tmin=  0.000, tmax=282.000
+Bbone: 1.430 +/- 0.1492, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 2.183 +/- 0.3720, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.885 +/- 0.3356, min = 0.942, max = 2.814 , tmin=  0.000, tmax=222.000
+pocket3: 4.116 +/- 1.1949, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.259 +/- 0.7541, min = 1.208, max = 6.165 , tmin=  0.000, tmax=244.000
+pocket5: 3.622 +/- 0.9891, min = 1.034, max = 6.502 , tmin=  0.000, tmax=282.000
+Bbone: 1.430 +/- 0.1492, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 2.183 +/- 0.3720, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.885 +/- 0.3356, min = 0.942, max = 2.814 , tmin=  0.000, tmax=222.000
+pocket3: 4.116 +/- 1.1949, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.259 +/- 0.7541, min = 1.208, max = 6.165 , tmin=  0.000, tmax=244.000
+pocket5: 3.622 +/- 0.9891, min = 1.034, max = 6.502 , tmin=  0.000, tmax=282.000
+Bbone: 1.430 +/- 0.1492, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 2.183 +/- 0.3720, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.885 +/- 0.3356, min = 0.942, max = 2.814 , tmin=  0.000, tmax=222.000
+pocket3: 4.116 +/- 1.1949, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.259 +/- 0.7541, min = 1.208, max = 6.165 , tmin=  0.000, tmax=244.000
+pocket5: 3.622 +/- 0.9891, min = 1.034, max = 6.502 , tmin=  0.000, tmax=282.000
+Bbone: 1.430 +/- 0.1492, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 2.183 +/- 0.3720, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.885 +/- 0.3356, min = 0.942, max = 2.814 , tmin=  0.000, tmax=222.000
+pocket3: 4.116 +/- 1.1949, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.259 +/- 0.7541, min = 1.208, max = 6.165 , tmin=  0.000, tmax=244.000
+pocket5: 3.622 +/- 0.9891, min = 1.034, max = 6.502 , tmin=  0.000, tmax=282.000
+Bbone: 1.430 +/- 0.1492, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 2.183 +/- 0.3720, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.885 +/- 0.3356, min = 0.942, max = 2.814 , tmin=  0.000, tmax=222.000
+pocket3: 4.116 +/- 1.1949, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.259 +/- 0.7541, min = 1.208, max = 6.165 , tmin=  0.000, tmax=244.000
+pocket5: 3.622 +/- 0.9891, min = 1.034, max = 6.502 , tmin=  0.000, tmax=282.000
+Bbone: 1.430 +/- 0.1492, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 2.183 +/- 0.3720, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.885 +/- 0.3356, min = 0.942, max = 2.814 , tmin=  0.000, tmax=222.000
+pocket3: 4.116 +/- 1.1949, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.259 +/- 0.7541, min = 1.208, max = 6.165 , tmin=  0.000, tmax=244.000
+pocket5: 3.622 +/- 0.9891, min = 1.034, max = 6.502 , tmin=  0.000, tmax=282.000
+Bbone: 1.430 +/- 0.1492, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 2.183 +/- 0.3720, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.885 +/- 0.3356, min = 0.942, max = 2.814 , tmin=  0.000, tmax=222.000
+pocket3: 4.116 +/- 1.1949, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.259 +/- 0.7541, min = 1.208, max = 6.165 , tmin=  0.000, tmax=244.000
+pocket5: 3.622 +/- 0.9891, min = 1.034, max = 6.502 , tmin=  0.000, tmax=282.000
+Bbone: 1.430 +/- 0.1492, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000
+
+RMSD Analysis for ../out_comb-300ns.xtc
+pocket1: 2.183 +/- 0.3720, min = 0.758, max = 3.402 , tmin=  0.000, tmax= 91.000
+pocket2: 1.885 +/- 0.3356, min = 0.942, max = 2.814 , tmin=  0.000, tmax=222.000
+pocket3: 4.116 +/- 1.1949, min = 0.885, max = 8.044 , tmin=  0.000, tmax=134.000
+pocket4: 3.259 +/- 0.7541, min = 1.208, max = 6.165 , tmin=  0.000, tmax=244.000
+pocket5: 3.622 +/- 0.9891, min = 1.034, max = 6.502 , tmin=  0.000, tmax=282.000
+Bbone: 1.430 +/- 0.1492, min = 0.810, max = 1.876 , tmin=  0.000, tmax= 21.000

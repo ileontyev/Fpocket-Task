@@ -1,0 +1,72 @@
+            :-) GROMACS - gmx grompp, 2024.3 (double precision) (-:
+
+Executable:   /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d
+Data prefix:  /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3
+Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD/OUTPUT/228434.InProt_solv-tip4pew_box60A_T298/MIN
+Command line:
+  gmx_d grompp -zero -maxwarn 2000 -o rubredoxin_solv_ions.tpr -n ../index.ndx -f InP_min.mdp -p ../rubredoxin_solv_ions.top -c ../rubredoxin_solv_ions_Xray.pdb -r ../rubredoxin_solv_ions_Xray.pdb
+
+Ignoring obsolete mdp entry 'optimize_fft'
+Ignoring obsolete mdp entry 'ns_type'
+Replacing old mdp entry 'nstxtcout' by 'nstxout-compressed'
+
+NOTE 1 [file InP_min.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+
+NOTE 2 [file InP_min.mdp]:
+  You have set rlist larger than the interaction cut-off, but you also have
+  verlet-buffer-tolerance > 0. Will set rlist using
+  verlet-buffer-tolerance.
+
+Generating 1-4 interactions: fudge = 0.5
+
+WARNING 1 [file rubredoxin_solv_ions.top, line 20531]:
+  The following macros were defined in the 'define' mdp field with the -D
+  prefix, but were not used in the topology:
+      POSRES_WATER
+  If you haven't made a spelling error, either use the macro you defined,
+  or don't define the macro
+
+Number of degrees of freedom in T-Coupling group rest is 69900.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file InP_min.mdp]:
+  Removing center of mass motion in the presence of position restraints
+  might cause artifacts. When you are using position restraints to
+  equilibrate a macro-molecule, the artifacts are usually negligible.
+
+
+There were 3 NOTEs
+
+There was 1 WARNING
+
+GROMACS reminds you: "Time is the best appraiser of scientific work, and I am aware that an industrial discovery rarely produces all its fruit in the hands of its first inventor." (Louis Pasteur)
+
+Setting the LD random seed to -88917061
+
+Generated 820 of the 820 non-bonded parameter combinations
+
+Generated 820 of the 820 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein'
+
+Excluding 3 bonded neighbours molecule type 'CL'
+
+Excluding 3 bonded neighbours molecule type 'NA'
+
+Excluding 3 bonded neighbours molecule type 'CL'
+
+Excluding 3 bonded neighbours molecule type 'SOL'
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+
+The largest distance between excluded atoms is 0.421 nm between atom 1187 and 1195
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 52x60x60, spacing 0.118 0.118 0.116
+
+Estimate for the relative computational load of the PME mesh part: 0.24
+
+This run will generate roughly 149 Mb of data

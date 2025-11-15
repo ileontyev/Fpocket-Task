@@ -1,0 +1,56 @@
+;
+;	Input file
+;
+;title               =  216 SPC/E water molecules ; a string
+;cpp                 =  cpp		        ; c-preprocessor
+include= -I/home/leontyev/systems/projects/Cramer_Lab/rubredoxin/topology/CpRd_AF3/ -I./input ; include FF folder
+
+;=================  Minimizer  ===============================
+integrator		= cg; steep ; cg 		;algorithm for energy minimization
+emtol			= 10.			;the convergency criterion for maximum force
+emstep			= 0.01			; [nm] - initial step-size
+nstcgsteep		= 100			;frequency of steepest descent step while doing conjugate gradient
+;=============== position retrains =============
+define 		= -DPOSRES_PROT -DPOSRES_WATER -DFLEXIBLE                  ; -D at the begining of the varname is necessary!!!
+;nstdisreout=0
+;======================================================================
+dt                  =  0.002		; time step
+nsteps              =  100000			; number of steps
+nstxout             =  10000000		; write coords
+nstvout             =  10000000            ; write velocities
+;xtc_grps            = enzyme_pdb_wat               ; the only saved group
+nstxtcout           = 100                  ; write coords to xtc-trajectory file
+nstlog		      =  5000			; print to logfile
+;energygrps          =  ATOMS	       ; energy groups
+nstenergy           =  1000			; print energies
+ns_type             =  grid ;simple		; pairlist method    
+;=================  Shake Specification  ===============================
+;constraint_algorithm = shake                                            
+;shake_tol           =0.00001                                             
+;lincs_order          = 8
+;lincs_iter           = 4
+;unconstrained_start  = yes
+;=================  Cut off specification =============================                                                                
+pbc			= xyz		; periodic boundary conditions
+rlist               =  1.1			; cut-off for ns 
+cutoff-scheme    =  Verlet; group
+nstlist             =  1			; update pairlist
+
+; OPTIONS FOR ELECTROSTATICS AND VDW: These parameters were all optimized for fast and accurate small molecule calculations.
+; See Shirts and Paliwal (2011)
+; Method for doing electrostatics = 
+optimize_fft        =  yes			; perform FFT optimization at start
+pme_order           = 4             ; interpolation order for PME
+coulombtype              = PME;  Cut-off; PME; PME-Switch;
+rcoulomb-switch          = 0.9
+rcoulomb                 = 0.9
+epsilon-rf              =  0
+; Method for doing Van der Waals = 
+vdw-type                 = Cut-off; Cut-off ; !!! Switch - slow but allows rvdw<rlist
+rvdw-switch              = 0.9 ; In gmx rvdw-switch
+rvdw                     = 0.9
+dispcorr            = EnerPres   ; long range dispersion corrections for Energy and Pressure
+;=======================================================================
+;freezegrps          =  CRYST CRYST_OW; CA ;Na+ should be frozen ; otherwise, will brake MD run
+;freezedim           =  Y Y Y  Y Y Y
+;energygrp_excl      =  CRYST CRYST;   Na+ CA

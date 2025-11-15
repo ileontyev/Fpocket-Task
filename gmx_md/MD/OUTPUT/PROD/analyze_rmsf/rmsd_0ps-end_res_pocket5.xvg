@@ -1,0 +1,24 @@
+# This file was created Thu Nov 13 09:17:42 2025
+# Created by:
+#             :-) GROMACS - gmx rmsf, 2024.3 (double precision) (-:
+# 
+# Executable:   /home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d
+# Data prefix:  /home/leontyev/programs/bin/gromacs/gromacs-2024.3
+# Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD/OUTPUT/228434.InProt_solv-tip4pew_box60A_T298/PROD/analyze_rmsf
+# Command line:
+#   gmx_d rmsf -f ../out.xtc -s ../../MIN/rubredoxin_solv_ions.tpr -b 0 -n idx_pockets.ndx -res -aniso -ox aver_0ps-end_res_pocket5.pdb -oq bfac_0ps-end_res_pocket5.pdb -o rmsf_0ps-end_res_pocket5.xvg -od rmsd_0ps-end_res_pocket5.xvg
+# gmx rmsf is part of G R O M A C S:
+#
+# GROningen MAchine for Chemical Simulation
+#
+@    title "RMS Deviation"
+@    xaxis  label "Residue"
+@    yaxis  label "(nm)"
+@TYPE xy
+   49   0.1855
+   59   0.4417
+   61   0.2814
+   62   0.1864
+   63   0.1418
+   64   0.1899
+   65   0.2998

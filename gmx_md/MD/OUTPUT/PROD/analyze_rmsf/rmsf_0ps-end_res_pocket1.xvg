@@ -1,0 +1,31 @@
+# This file was created Thu Nov 13 09:17:41 2025
+# Created by:
+#             :-) GROMACS - gmx rmsf, 2024.3 (double precision) (-:
+# 
+# Executable:   /home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d
+# Data prefix:  /home/leontyev/programs/bin/gromacs/gromacs-2024.3
+# Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD/OUTPUT/228434.InProt_solv-tip4pew_box60A_T298/PROD/analyze_rmsf
+# Command line:
+#   gmx_d rmsf -f ../out.xtc -s ../../MIN/rubredoxin_solv_ions.tpr -b 0 -n idx_pockets.ndx -res -aniso -ox aver_0ps-end_res_pocket1.pdb -oq bfac_0ps-end_res_pocket1.pdb -o rmsf_0ps-end_res_pocket1.xvg -od rmsd_0ps-end_res_pocket1.xvg
+# gmx rmsf is part of G R O M A C S:
+#
+# S  C  A  M  O  R  G
+#
+@    title "RMS fluctuation"
+@    xaxis  label "Residue"
+@    yaxis  label "(nm)"
+@TYPE xy
+   48   0.1304
+   49   0.1037
+   50   0.0669
+   51   0.0864
+   54   0.2035
+   55   0.1117
+   58   0.2895
+   59   0.2505
+   60   0.1745
+   61   0.1895
+   63   0.1275
+   65   0.0734
+   66   0.1807
+   67   0.0823

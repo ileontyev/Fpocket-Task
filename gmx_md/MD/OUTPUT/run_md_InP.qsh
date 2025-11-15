@@ -1,0 +1,82 @@
+#!/bin/bash
+#SBATCH -J NoLIG
+#SBATCH -o NoLIG.o%j
+#SBATCH --time=3000
+export LD_LIBRARY_PATH=
+host=$(hostname)
+TmpNm=gmx.228434
+TmpDir=./
+echo -e "The job was started at $(date +%d.%m.%y-%T ) on node $host"
+echo -e "The runtime output is stored locally on node $host at $TmpDir"
+mkdir $TmpDir
+
+echo -e "
+
+Starting block for phase Protein"
+
+########################     PROTEIN SIMULATION BLOCK        ############################
+
+if [ ! "${TmpDir}" ]; then TmpDir=.; fi
+
+#################### START MIN BLOCK #####################
+cd MIN
+
+/local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d mdrun -nb cpu -bonded cpu -pme cpu  -ntomp 8 -s rubredoxin_solv_ions'.tpr' -deffnm rubredoxin_solv_ions -e $TmpDir/rubredoxin_solv_ions'.edr' -o $TmpDir/rubredoxin_solv_ions'.trr' -x $TmpDir/rubredoxin_solv_ions'.xtc' -c rubredoxin_solv_ions'_'min'.gro' -g rubredoxin_solv_ions'.log' 
+
+rm -f $TmpDir/'#'*
+mv $TmpDir/* ./
+cd ../
+##########################################################
+if [ ! "${TmpDir}" ]; then TmpDir=.; fi
+
+#################### START NVT BLOCK #####################
+cd NVT
+    cp ../MIN/rubredoxin_solv_ions_min.gro ./
+    /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d grompp -zero -maxwarn 2000  -o out'.tpr' -n ../index.ndx -f InP_nvt.mdp -p ../rubredoxin_solv_ions'.top' -c rubredoxin_solv_ions_min.gro  -r ../rubredoxin_solv_ions_Xray.pdb >> tpr.out 2>&1
+    if [ ! -r out'.tpr' ]; then
+        echo ERROR: out.tpr  was not created, exit the job.
+        exit
+    fi
+
+    /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx mdrun -gpu_id 1 -nb gpu -bonded gpu -pme gpu -update cpu  -ntomp 8 -s out'.tpr' -deffnm out -e $TmpDir/out'.edr' -o $TmpDir/out'.trr' -x $TmpDir/out'.xtc' -c out'_'nvt'.gro' -g out'.log' 
+
+    rm -f $TmpDir/'#'*
+    mv $TmpDir/* ./
+cd ../
+##########################################################
+if [ ! "${TmpDir}" ]; then TmpDir=.; fi
+
+#################### START NPT BLOCK #####################
+cd NPT
+    cp ../NVT/out_nvt.gro ./
+    /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d grompp -zero -maxwarn 2000 -t ../NVT/out.cpt -o out'.tpr' -n ../index.ndx -f InP_npt.mdp -p ../rubredoxin_solv_ions'.top' -c out_nvt.gro  -r ../rubredoxin_solv_ions_Xray.pdb >> tpr.out 2>&1
+    if [ ! -r out'.tpr' ]; then
+        echo ERROR: out.tpr  was not created, exit the job.
+        exit
+    fi
+
+    /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx mdrun -gpu_id 1 -nb gpu -bonded gpu -pme gpu -update cpu  -ntomp 8 -s out'.tpr' -deffnm out -e $TmpDir/out'.edr' -o $TmpDir/out'.trr' -x $TmpDir/out'.xtc' -c out'_'npt'.gro' -g out'.log' 
+
+    rm -f $TmpDir/'#'*
+    mv $TmpDir/* ./
+cd ../
+##########################################################
+if [ ! "${TmpDir}" ]; then TmpDir=.; fi
+
+#################### START PROD BLOCK #####################
+cd PROD
+    cp ../NPT/out_npt.gro ./
+    /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d grompp -zero -maxwarn 2000 -t ../NPT/out.cpt -o out'.tpr' -n ../index.ndx -f InP.mdp -p ../rubredoxin_solv_ions'.top' -c out_npt.gro  -r ../rubredoxin_solv_ions_Xray.pdb >> tpr.out 2>&1
+    if [ ! -r out'.tpr' ]; then
+        echo ERROR: out.tpr  was not created, exit the job.
+        exit
+    fi
+
+    /local_home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx mdrun -gpu_id 1 -nb gpu -bonded gpu -pme gpu -update cpu  -ntomp 8 -s out'.tpr' -deffnm out -e $TmpDir/out'.edr' -o $TmpDir/out'.trr' -x $TmpDir/out'.xtc' -c out'_'prod'.gro' -g out'.log' 
+
+    rm -f $TmpDir/'#'*
+    mv $TmpDir/* ./
+cd ../
+##########################################################
+rm -r $TmpDir
+echo -e "	/home/leontyev/systems/projects/Proteins_FEP/PD-1/MD/OUTPUT/228434.InProt_solv-tip4pew_box60A_T298	$(date +%d.%m.%y-%T )" >> /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD/OUTPUT/ResFile.txt

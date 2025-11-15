@@ -1,0 +1,24 @@
+# This file was created Sat Nov 15 05:53:44 2025
+# Created by:
+#             :-) GROMACS - gmx rmsf, 2024.3 (double precision) (-:
+# 
+# Executable:   /home/leontyev/programs/bin/gromacs/gromacs-2024.3/bin/gmx_d
+# Data prefix:  /home/leontyev/programs/bin/gromacs/gromacs-2024.3
+# Working dir:  /home/leontyev/systems/projects/Proteins_FEP/PD-1/MD_distro/PROD/analyze_rmsf
+# Command line:
+#   gmx_d rmsf -f ../out_comb-300ns.xtc -s ../../MIN/pd1_solv_ions.tpr -b 10000 -n idx_pockets.ndx -res -aniso -ox aver_10000ps-end_res_pocket4.pdb -oq bfac_10000ps-end_res_pocket4.pdb -o rmsf_10000ps-end_res_pocket4.xvg -od rmsd_10000ps-end_res_pocket4.xvg
+# gmx rmsf is part of G R O M A C S:
+#
+# Good ROcking Metal Altar for Chronical Sinners
+#
+@    title "RMS fluctuation"
+@    xaxis  label "Residue"
+@    yaxis  label "(nm)"
+@TYPE xy
+    1   0.1882
+    2   0.2072
+   29   0.2124
+   97   0.1128
+  100   0.1677
+  101   0.1749
+  103   0.2314
